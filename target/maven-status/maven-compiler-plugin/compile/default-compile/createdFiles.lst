@@ -1,0 +1,7 @@
+com/mycompany/catalogos/arrays/CatalogosArrays.class
+com/mycompany/catalogos/arrays/controlador/EventControlador.class
+com/mycompany/catalogos/arrays/service/ServiceVenues.class
+com/mycompany/catalogos/arrays/service/EventService.class
+com/mycompany/catalogos/arrays/dto/EventDto.class
+com/mycompany/catalogos/arrays/dto/VenueDto.class
+com/mycompany/catalogos/arrays/controlador/VenuesControlador.class
