@@ -1,4 +1,4 @@
-# Resumen del Proyecto: catalogos-arrays
+#  Proyecto: catalogos-arrays
 
 ## 1. Descripción general del proyecto
 
