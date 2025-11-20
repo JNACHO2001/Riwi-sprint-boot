@@ -2,10 +2,12 @@ package eventos.catalogos.infrastructure.entities.mapper;
 
 import eventos.catalogos.domain.model.Task;
 import eventos.catalogos.infrastructure.entities.TaskEntity;
+import org.springframework.stereotype.Component;
 
+@Component
 public class TaskMapper {
 
-    public static TaskEntity toEntity(Task task) {
+    public  TaskEntity toEntity(Task task) {
         return new TaskEntity(
                 task.getId(),
                 task.getTitle(),
@@ -16,7 +18,7 @@ public class TaskMapper {
 
     }
 
-    public static Task toDomain(TaskEntity entity) {
+    public  Task toDomain(TaskEntity entity) {
 
         return new Task(
                 entity.getId(),

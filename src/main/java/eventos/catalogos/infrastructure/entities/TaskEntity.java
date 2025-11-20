@@ -1,12 +1,13 @@
 package eventos.catalogos.infrastructure.entities;
 
+import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import java.time.LocalDateTime;
-import org.springframework.stereotype.Service;
+import java.time.LocalDate;
 
-@Service
+
+@Entity
 public class TaskEntity {
 
     @Id
@@ -14,13 +15,13 @@ public class TaskEntity {
     private Long id;
     private String title;
     private String description;
-    private LocalDateTime creationDate;
+    private LocalDate creationDate;
     private boolean completed;
 
     public TaskEntity() {
     }
 
-    public TaskEntity(Long id, String title, String description, LocalDateTime creationDate, boolean completed) {
+    public TaskEntity(Long id, String title, String description, LocalDate creationDate, boolean completed) {
         this.id = id;
         this.title = title;
         this.description = description;
@@ -52,11 +53,11 @@ public class TaskEntity {
         this.description = description;
     }
 
-    public LocalDateTime getCreationDate() {
+    public LocalDate getCreationDate() {
         return creationDate;
     }
 
-    public void setCreationDate(LocalDateTime creationDate) {
+    public void setCreationDate(LocalDate creationDate) {
         this.creationDate = creationDate;
     }
 
