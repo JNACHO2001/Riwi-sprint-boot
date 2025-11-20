@@ -1,7 +1,7 @@
 
 package eventos.catalogos.infrastructure.controllers;
 
-import eventos.catalogos.aplication.services.TaskService;
+import eventos.catalogos.application.services.TaskService;
 import eventos.catalogos.domain.model.Task;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
