@@ -5,7 +5,11 @@ import eventos.catalogos.domain.ports.out.TaskRepositoryPort;
 import eventos.catalogos.infrastructure.entities.mapper.TaskMapper;
 import java.util.List;
 import java.util.Optional;
+import org.springframework.stereotype.Component;
 
+
+
+@Component
 public class JpaTaskRepositoryAdapter implements TaskRepositoryPort {
 
     private final JpaTaskRepository jpaTaskRepository;
