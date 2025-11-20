@@ -1,5 +1,6 @@
 package eventos.catalogos.domain.model;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 public class Task {
@@ -7,10 +8,10 @@ public class Task {
     private Long id;
     private String title;
     private String description;
-    private LocalDateTime creationDate;
+    private LocalDate creationDate;
     private boolean completed;
 
-    public Task(Long id, String title, String description, LocalDateTime creationDate, boolean completed) {
+    public Task(Long id, String title, String description, LocalDate creationDate, boolean completed) {
         this.id = id;
         this.title = title;
         this.description = description;
@@ -42,11 +43,11 @@ public class Task {
         this.description = description;
     }
 
-    public LocalDateTime getCreationDate() {
+    public LocalDate getCreationDate() {
         return creationDate;
     }
 
-    public void setCreationDate(LocalDateTime creationDate) {
+    public void setCreationDate(LocalDate creationDate) {
         this.creationDate = creationDate;
     }
 
