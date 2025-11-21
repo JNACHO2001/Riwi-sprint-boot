@@ -1,14 +1,14 @@
 package eventos.catalogos.infrastructure.entities.mapper;
 
 import eventos.catalogos.domain.model.Task;
-import eventos.catalogos.infrastructure.entities.TaskEntity;
+import eventos.catalogos.infrastructure.entities.TaskDocument;
 import org.springframework.stereotype.Component;
 
 @Component
 public class TaskMapper {
 
-    public  TaskEntity toEntity(Task task) {
-        return new TaskEntity(
+    public  TaskDocument toEntity(Task task) {
+        return new TaskDocument(
                 task.getId(),
                 task.getTitle(),
                 task.getDescription(),
@@ -18,7 +18,7 @@ public class TaskMapper {
 
     }
 
-    public  Task toDomain(TaskEntity entity) {
+    public  Task toDomain(TaskDocument entity) {
 
         return new Task(
                 entity.getId(),
