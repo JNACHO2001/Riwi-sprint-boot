@@ -18,4 +18,9 @@ public class CreateUserUseCaseImpl implements UserUseCase {
         return useRepositoryPort.save(user);
     }
 
+    @Override
+    public User BuscarPorId(Long id) {
+        return useRepositoryPort.findById(id);
+    }
+
 }

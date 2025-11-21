@@ -22,16 +22,20 @@ public class JpaUserRepositoryAdapter implements UserRepositoryPort {
     @Override
     public User save(User user) {
 
-        var document = userMapper.toDocument(user);
-        var comvertida = repo.save(document);
+        var entity= userMapper.toDocument(user);
+        var comvertida = repo.save(entity);
 
         return userMapper.toDomain(comvertida);
 
     }
 
     @Override
-    public User findById(String id) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public User findById(Long id) {
+        return repo.findById(id)
+                .map(userMapper::toDomain)
+                .orElseThrow(()-> new  RuntimeException("No se encontro el usuario") );
+        
+        
     }
 
     @Override

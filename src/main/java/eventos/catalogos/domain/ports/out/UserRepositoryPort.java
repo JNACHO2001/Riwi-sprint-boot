@@ -9,7 +9,7 @@ public interface UserRepositoryPort {
     
     User save(User user);
 
-    User findById(String id);
+    User findById(Long id);
 
     List<User> findAll();
     
