@@ -14,6 +14,7 @@ public class EventMapper {
                 entity.getId(),
                 entity.getName(),
                 entity.getDate(),
+                entity.getStatus(),
                 null // Avoid circular recursion
         );
     }
@@ -26,6 +27,7 @@ public class EventMapper {
                 entity.getId(),
                 entity.getName(),
                 entity.getDate(),
+                entity.getStatus(),
                 venueMapper.toDomain(entity.getVenue()));
     }
 
@@ -36,6 +38,7 @@ public class EventMapper {
         entity.setId(domain.getId());
         entity.setName(domain.getName());
         entity.setDate(domain.getDate());
+        entity.setStatus(domain.getStatus());
         // Venue needs to be set via service or repository lookup usually
         return entity;
     }

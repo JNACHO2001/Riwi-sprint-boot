@@ -13,6 +13,7 @@ public class EventEntity {
 
     private String name;
     private LocalDateTime date;
+    private String status;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "venue_id")
@@ -21,10 +22,11 @@ public class EventEntity {
     public EventEntity() {
     }
 
-    public EventEntity(Long id, String name, LocalDateTime date, VenueEntity venue) {
+    public EventEntity(Long id, String name, LocalDateTime date, String status, VenueEntity venue) {
         this.id = id;
         this.name = name;
         this.date = date;
+        this.status = status;
         this.venue = venue;
     }
 
@@ -50,6 +52,14 @@ public class EventEntity {
 
     public void setDate(LocalDateTime date) {
         this.date = date;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     public VenueEntity getVenue() {

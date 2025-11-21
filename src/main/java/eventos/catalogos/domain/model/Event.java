@@ -6,15 +6,17 @@ public class Event {
     private Long id;
     private String name;
     private LocalDateTime date;
+    private String status; // ACTIVE, CANCELLED
     private Venue venue;
 
     public Event() {
     }
 
-    public Event(Long id, String name, LocalDateTime date, Venue venue) {
+    public Event(Long id, String name, LocalDateTime date, String status, Venue venue) {
         this.id = id;
         this.name = name;
         this.date = date;
+        this.status = status;
         this.venue = venue;
     }
 
@@ -40,6 +42,14 @@ public class Event {
 
     public void setDate(LocalDateTime date) {
         this.date = date;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     public Venue getVenue() {

@@ -14,4 +14,6 @@ public interface EventRepositoryPort {
     void deleteById(Long id);
 
     List<Event> findByVenueId(Long venueId);
+
+    List<Event> search(String status, java.time.LocalDateTime start, java.time.LocalDateTime end, Long venueId);
 }
