@@ -3,7 +3,7 @@ package eventos.catalogos.infrastructure.config;
 import eventos.catalogos.application.services.TaskService;
 import eventos.catalogos.application.usercases.CreatedUseCaseImpl;
 import eventos.catalogos.domain.ports.out.TaskRepositoryPort;
-import eventos.catalogos.infrastructure.repository.JpaTaskRepositoryAdapter;
+import eventos.catalogos.infrastructure.repository.MongoTaskRepositoryAdapter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -19,7 +19,7 @@ public class ApplicationConfig {
     }
 
     @Bean
-    public TaskRepositoryPort taskRepositoryPort(JpaTaskRepositoryAdapter jpaTaskRepositoryAdapter) {
+    public TaskRepositoryPort taskRepositoryPort(MongoTaskRepositoryAdapter jpaTaskRepositoryAdapter) {
         return jpaTaskRepositoryAdapter;
     }
 
