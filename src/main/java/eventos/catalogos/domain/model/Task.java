@@ -1,17 +1,17 @@
 package eventos.catalogos.domain.model;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
+
 
 public class Task {
     
-    private Long id;
+    private String id;
     private String title;
     private String description;
     private LocalDate creationDate;
     private boolean completed;
 
-    public Task(Long id, String title, String description, LocalDate creationDate, boolean completed) {
+    public Task(String id, String title, String description, LocalDate creationDate, boolean completed) {
         this.id = id;
         this.title = title;
         this.description = description;
@@ -19,11 +19,11 @@ public class Task {
         this.completed = completed;
     }
 
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -58,6 +58,8 @@ public class Task {
     public void setCompleted(boolean completed) {
         this.completed = completed;
     }
+
+  
     
     
 
