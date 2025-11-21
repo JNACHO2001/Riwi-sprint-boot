@@ -9,12 +9,12 @@ import org.springframework.stereotype.Component;
 
 
 @Component
-public class MongoUserRepositoryAdapter implements UserRepositoryPort {
+public class JpaUserRepositoryAdapter implements UserRepositoryPort {
 
-    private final SpringUserMongoRepository repo;
+    private final JpaUserRepository repo;
     private final UserMapper userMapper;
 
-    public MongoUserRepositoryAdapter(SpringUserMongoRepository repo, UserMapper userMapper) {
+    public JpaUserRepositoryAdapter(JpaUserRepository repo, UserMapper userMapper) {
         this.repo = repo;
         this.userMapper = userMapper;
     }

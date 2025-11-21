@@ -7,15 +7,13 @@ import java.util.List;
 import java.util.Optional;
 import org.springframework.stereotype.Component;
 
-
-
 @Component
-public class JpaTaskRepositoryAdapter implements TaskRepositoryPort {
+public class MongoTaskRepositoryAdapter implements TaskRepositoryPort {
 
-    private final JpaTaskRepository jpaTaskRepository;
+    private final SpringTaskMongoRepository jpaTaskRepository;
     private final TaskMapper taskMapper; // Para convertir entre Task y TaskEntity
 
-    public JpaTaskRepositoryAdapter(JpaTaskRepository jpaTaskRepository, TaskMapper taskMapper) {
+    public MongoTaskRepositoryAdapter(SpringTaskMongoRepository jpaTaskRepository, TaskMapper taskMapper) {
         this.jpaTaskRepository = jpaTaskRepository;
         this.taskMapper = taskMapper;
     }
@@ -49,5 +47,5 @@ public class JpaTaskRepositoryAdapter implements TaskRepositoryPort {
     public boolean deleteById(Long id) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
-    
+
 }
