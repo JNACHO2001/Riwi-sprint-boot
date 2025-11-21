@@ -1,27 +1,26 @@
 package eventos.catalogos.infrastructure.entities;
 
-import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import java.time.LocalDate;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-
-@Entity
-public class TaskEntity {
+@Document(collection = "task")
+public class TaskDocument {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private String id;
     private String title;
     private String description;
     private LocalDate creationDate;
     private boolean completed;
 
-    public TaskEntity() {
+    public TaskDocument() {
     }
 
-    public TaskEntity(Long id, String title, String description, LocalDate creationDate, boolean completed) {
+    public TaskDocument(String id, String title, String description, LocalDate creationDate, boolean completed) {
         this.id = id;
         this.title = title;
         this.description = description;
@@ -29,11 +28,11 @@ public class TaskEntity {
         this.completed = completed;
     }
 
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -68,5 +67,7 @@ public class TaskEntity {
     public void setCompleted(boolean completed) {
         this.completed = completed;
     }
+
+    
 
 }
