@@ -1,0 +1,4 @@
+ALTER TABLE events
+ADD CONSTRAINT fk_event_venue
+FOREIGN KEY (venue_id) REFERENCES venues(id)
+ON DELETE CASCADE;
