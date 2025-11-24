@@ -1,8 +1,9 @@
 
 package eventos.catalogos.infrastructure.controllers;
 
-import eventos.catalogos.application.services.TaskService;
 import eventos.catalogos.domain.model.Task;
+import eventos.catalogos.domain.ports.in.TaskUseCase;
+import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -13,21 +14,16 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/api/tasks")
 public class TaskController {
-    private final TaskService taskService;
+    private final TaskUseCase taskUseCase;
 
-    public TaskController(TaskService taskService) {
-        this.taskService = taskService;
+    public TaskController(TaskUseCase taskUseCase) {
+        this.taskUseCase = taskUseCase;
     }
-    
+
     @PostMapping
-    public ResponseEntity<Task> createTask(@RequestBody Task task) {
-        Task createdTask = taskService.createdTask(task);
+    public ResponseEntity<Task> createTask(@Valid @RequestBody Task task) {
+        Task createdTask = taskUseCase.createdTask(task);
         return new ResponseEntity<>(createdTask, HttpStatus.CREATED);
     }
-    
-    
-    
-    
-    
-    
+
 }

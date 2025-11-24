@@ -3,8 +3,10 @@ package eventos.catalogos.infrastructure.entities;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.validation.constraints.NotNull;
 import java.time.LocalDate;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.Field;
 
 @Document(collection = "task")
 public class TaskDocument {
@@ -17,15 +19,21 @@ public class TaskDocument {
     private LocalDate creationDate;
     private boolean completed;
 
+    @NotNull(message = "El userId es obligatorio")
+    @Field("user_id")
+    private Long userId;
+
     public TaskDocument() {
     }
 
-    public TaskDocument(String id, String title, String description, LocalDate creationDate, boolean completed) {
+    public TaskDocument(String id, String title, String description, LocalDate creationDate, boolean completed,
+            Long userId) {
         this.id = id;
         this.title = title;
         this.description = description;
         this.creationDate = creationDate;
         this.completed = completed;
+        this.userId = userId;
     }
 
     public String getId() {
@@ -68,6 +76,12 @@ public class TaskDocument {
         this.completed = completed;
     }
 
-    
+    public Long getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Long userId) {
+        this.userId = userId;
+    }
 
 }

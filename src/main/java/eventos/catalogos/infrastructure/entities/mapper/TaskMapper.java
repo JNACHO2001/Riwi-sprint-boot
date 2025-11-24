@@ -7,27 +7,24 @@ import org.springframework.stereotype.Component;
 @Component
 public class TaskMapper {
 
-    public  TaskDocument toEntity(Task task) {
-        return new TaskDocument(
-                task.getId(),
-                task.getTitle(),
-                task.getDescription(),
-                task.getCreationDate(),
-                task.isCompleted()
-        );
-
+    public TaskDocument toEntity(Task task) {
+        return new TaskDocument(task.getId(), task.getTitle(), task.getDescription(),
+                task.getCreationDate(), task.isCompleted(), task.getUserId());
     }
 
-    public  Task toDomain(TaskDocument entity) {
+    public Task toDomain(TaskDocument taskDocument) {
+
+        if (taskDocument == null) {
+            return null;
+        }
 
         return new Task(
-                entity.getId(),
-                entity.getTitle(),
-                entity.getDescription(),
-                entity.getCreationDate(),
-                entity.isCompleted()
-        );
+                taskDocument.getId(),
+                taskDocument.getTitle(),
+                taskDocument.getDescription(),
+                taskDocument.getCreationDate(),
+                taskDocument.isCompleted(),
+                taskDocument.getUserId());
 
     }
-
 }

@@ -1,22 +1,27 @@
 package eventos.catalogos.domain.model;
 
+import eventos.catalogos.domain.exceptions.InvalidTaskException;
 import java.time.LocalDate;
 
-
 public class Task {
-    
+
     private String id;
     private String title;
     private String description;
     private LocalDate creationDate;
     private boolean completed;
+    private Long userId;
 
-    public Task(String id, String title, String description, LocalDate creationDate, boolean completed) {
+    public Task(String id, String title, String description, LocalDate creationDate, boolean completed, Long userId) {
+        if (userId == null) {
+            throw new InvalidTaskException("El userId no puede ser null. Toda tarea debe estar asociada a un usuario.");
+        }
         this.id = id;
         this.title = title;
         this.description = description;
         this.creationDate = creationDate;
         this.completed = completed;
+        this.userId = userId;
     }
 
     public String getId() {
@@ -59,8 +64,15 @@ public class Task {
         this.completed = completed;
     }
 
-  
-    
-    
+    public Long getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Long userId) {
+        if (userId == null) {
+            throw new InvalidTaskException("El userId no puede ser null. Toda tarea debe estar asociada a un usuario.");
+        }
+        this.userId = userId;
+    }
 
 }

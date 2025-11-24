@@ -1,12 +1,11 @@
 package eventos.catalogos.infrastructure.repository;
 
+import eventos.catalogos.domain.exceptions.UserNotFoundException;
 import eventos.catalogos.domain.model.User;
 import eventos.catalogos.domain.ports.out.UserRepositoryPort;
 import eventos.catalogos.infrastructure.entities.mapper.UserMapper;
 import java.util.List;
 import org.springframework.stereotype.Component;
-
-
 
 @Component
 public class JpaUserRepositoryAdapter implements UserRepositoryPort {
@@ -22,7 +21,7 @@ public class JpaUserRepositoryAdapter implements UserRepositoryPort {
     @Override
     public User save(User user) {
 
-        var entity= userMapper.toDocument(user);
+        var entity = userMapper.toDocument(user);
         var comvertida = repo.save(entity);
 
         return userMapper.toDomain(comvertida);
@@ -33,14 +32,14 @@ public class JpaUserRepositoryAdapter implements UserRepositoryPort {
     public User findById(Long id) {
         return repo.findById(id)
                 .map(userMapper::toDomain)
-                .orElseThrow(()-> new  RuntimeException("No se encontro el usuario") );
-        
-        
+                .orElseThrow(() -> new UserNotFoundException(id));
+
     }
 
     @Override
     public List<User> findAll() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from
+                                                                       // nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
 }

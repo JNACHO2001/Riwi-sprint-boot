@@ -1,21 +1,19 @@
 package eventos.catalogos.infrastructure.config;
 
-import eventos.catalogos.application.services.TaskService;
 import eventos.catalogos.application.usercases.CreatedUseCaseImpl;
+import eventos.catalogos.domain.ports.in.TaskUseCase;
 import eventos.catalogos.domain.ports.out.TaskRepositoryPort;
+import eventos.catalogos.domain.ports.out.UserRepositoryPort;
 import eventos.catalogos.infrastructure.repository.MongoTaskRepositoryAdapter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-
 
 @Configuration
 public class ApplicationConfig {
 
     @Bean
-    public TaskService taskService(TaskRepositoryPort taskRepositoryPort) {
-        return new TaskService(
-                new CreatedUseCaseImpl(taskRepositoryPort)
-        );
+    public TaskUseCase taskUseCase(TaskRepositoryPort taskRepositoryPort, UserRepositoryPort userRepositoryPort) {
+        return new CreatedUseCaseImpl(taskRepositoryPort, userRepositoryPort);
     }
 
     @Bean
