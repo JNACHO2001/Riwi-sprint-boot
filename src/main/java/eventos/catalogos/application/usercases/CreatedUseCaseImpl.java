@@ -1,9 +1,7 @@
 package eventos.catalogos.application.usercases;
 
 import eventos.catalogos.domain.exceptions.InvalidTaskException;
-import eventos.catalogos.domain.exceptions.UserNotFoundException;
 import eventos.catalogos.domain.model.Task;
-import eventos.catalogos.domain.model.User;
 import eventos.catalogos.domain.ports.in.TaskUseCase;
 import eventos.catalogos.domain.ports.out.TaskRepositoryPort;
 import eventos.catalogos.domain.ports.out.UserRepositoryPort;

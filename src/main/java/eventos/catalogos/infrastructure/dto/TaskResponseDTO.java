@@ -1,8 +1,8 @@
-package eventos.catalogos.domain.model;
+package eventos.catalogos.infrastructure.dto;
 
 import java.time.LocalDate;
 
-public class Task {
+public class TaskResponseDTO {
 
     private String id;
     private String title;
@@ -11,10 +11,11 @@ public class Task {
     private boolean completed;
     private Long userId;
 
-    public Task() {
+    public TaskResponseDTO() {
     }
 
-    public Task(String id, String title, String description, LocalDate creationDate, boolean completed, Long userId) {
+    public TaskResponseDTO(String id, String title, String description,
+            LocalDate creationDate, boolean completed, Long userId) {
         this.id = id;
         this.title = title;
         this.description = description;
@@ -70,5 +71,4 @@ public class Task {
     public void setUserId(Long userId) {
         this.userId = userId;
     }
-
 }
