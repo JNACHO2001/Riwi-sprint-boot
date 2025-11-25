@@ -4,7 +4,7 @@ services:
     build: .
     container_name: riwi-sprint-boot-app
     ports:
-      - "8081:8081" # Mapea el puerto 8081
+      - "8080:8080" # Mapea el puerto 8081
     depends_on:
       - mysqldb
       - mongodb
@@ -27,7 +27,7 @@ services:
     image: mysql:8.0
     container_name: riwi-mysql-db
     ports:
-      - "3309:3306" # Mapea al puerto 3309 para evitar conflictos
+      - "3308:3306" # Mapea al puerto 3308 para evitar conflictos
     environment:
       MYSQL_DATABASE: db_users_hexagonal
       MYSQL_ROOT_PASSWORD: 123456
