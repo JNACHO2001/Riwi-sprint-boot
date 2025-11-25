@@ -1,0 +1,114 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for eventos:catalogos:jar:0.0.1-SNAPSHOT
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: org.springframework.boot:spring-boot-starter-data-mongodb:jar -> duplicate declaration of version (?) @ line 68, column 21
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] -------------------------< eventos:catalogos >--------------------------
+[INFO] Building catalogos 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:3.5.7:run (default-cli) > test-compile @ catalogos >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ catalogos ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 3 resources from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ catalogos ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ catalogos ---
+[INFO] skip non existing resourceDirectory /home/Coder/NetBeansProjects/Riwi-sprint-boot/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ catalogos ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] <<< spring-boot:3.5.7:run (default-cli) < test-compile @ catalogos <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:3.5.7:run (default-cli) @ catalogos ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.7)
+
+2025-11-25T15:29:16.077-05:00  INFO 33575 --- [catalogos] [           main] eventos.catalogos.CatalogosApplication   : Starting CatalogosApplication using Java 17.0.17 with PID 33575 (/home/Coder/NetBeansProjects/Riwi-sprint-boot/target/classes started by Coder in /home/Coder/NetBeansProjects/Riwi-sprint-boot)
+2025-11-25T15:29:16.078-05:00  INFO 33575 --- [catalogos] [           main] eventos.catalogos.CatalogosApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-11-25T15:29:16.393-05:00  INFO 33575 --- [catalogos] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-11-25T15:29:16.394-05:00  INFO 33575 --- [catalogos] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-25T15:29:16.416-05:00  INFO 33575 --- [catalogos] [           main] .RepositoryConfigurationExtensionSupport : Spring Data JPA - Could not safely identify store assignment for repository candidate interface eventos.catalogos.infrastructure.repository.MongoVenueRepository; If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: jakarta.persistence.Entity, jakarta.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository
+2025-11-25T15:29:16.424-05:00  INFO 33575 --- [catalogos] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 23 ms. Found 1 JPA repository interface.
+2025-11-25T15:29:16.439-05:00  INFO 33575 --- [catalogos] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-11-25T15:29:16.439-05:00  INFO 33575 --- [catalogos] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2025-11-25T15:29:16.443-05:00  INFO 33575 --- [catalogos] [           main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface eventos.catalogos.infrastructure.repository.JpaEventRepository; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2025-11-25T15:29:16.445-05:00  INFO 33575 --- [catalogos] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 1 MongoDB repository interface.
+2025-11-25T15:29:16.653-05:00  INFO 33575 --- [catalogos] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-11-25T15:29:16.660-05:00  INFO 33575 --- [catalogos] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-25T15:29:16.660-05:00  INFO 33575 --- [catalogos] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.48]
+2025-11-25T15:29:16.688-05:00  INFO 33575 --- [catalogos] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-11-25T15:29:16.688-05:00  INFO 33575 --- [catalogos] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 586 ms
+2025-11-25T15:29:16.807-05:00  INFO 33575 --- [catalogos] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-25T15:29:16.951-05:00  INFO 33575 --- [catalogos] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@48d739f
+2025-11-25T15:29:16.952-05:00  INFO 33575 --- [catalogos] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-25T15:29:16.976-05:00  INFO 33575 --- [catalogos] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://127.0.0.1:3309/db_users_hexagonal (MySQL 8.0)
+2025-11-25T15:29:17.000-05:00  INFO 33575 --- [catalogos] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table `db_users_hexagonal`.`flyway_schema_history` does not exist yet
+2025-11-25T15:29:17.003-05:00  INFO 33575 --- [catalogos] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 3 migrations (execution time 00:00.011s)
+2025-11-25T15:29:17.014-05:00  INFO 33575 --- [catalogos] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table `db_users_hexagonal`.`flyway_schema_history` ...
+2025-11-25T15:29:17.052-05:00  INFO 33575 --- [catalogos] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema `db_users_hexagonal`: << Empty Schema >>
+2025-11-25T15:29:17.058-05:00  INFO 33575 --- [catalogos] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema `db_users_hexagonal` to version "1 - init"
+2025-11-25T15:29:17.085-05:00  INFO 33575 --- [catalogos] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema `db_users_hexagonal` to version "2 - relaciones"
+2025-11-25T15:29:17.086-05:00  INFO 33575 --- [catalogos] [           main] o.f.c.i.s.DefaultSqlScriptExecutor       : +---+
+| 1 |
++---+
+| 1 |
++---+
+
+2025-11-25T15:29:17.098-05:00  INFO 33575 --- [catalogos] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema `db_users_hexagonal` to version "3 - ajustes"
+2025-11-25T15:29:17.098-05:00  INFO 33575 --- [catalogos] [           main] o.f.c.i.s.DefaultSqlScriptExecutor       : +---+
+| 1 |
++---+
+| 1 |
++---+
+
+2025-11-25T15:29:17.112-05:00  INFO 33575 --- [catalogos] [           main] o.f.core.internal.command.DbMigrate      : Successfully applied 3 migrations to schema `db_users_hexagonal`, now at version v3 (execution time 00:00.016s)
+2025-11-25T15:29:17.155-05:00  INFO 33575 --- [catalogos] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-25T15:29:17.184-05:00  INFO 33575 --- [catalogos] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.33.Final
+2025-11-25T15:29:17.206-05:00  INFO 33575 --- [catalogos] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-25T15:29:17.342-05:00  INFO 33575 --- [catalogos] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-25T15:29:17.384-05:00  INFO 33575 --- [catalogos] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.44
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-25T15:29:17.776-05:00  INFO 33575 --- [catalogos] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-25T15:29:17.793-05:00  INFO 33575 --- [catalogos] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-25T15:29:17.996-05:00  INFO 33575 --- [catalogos] [           main] org.mongodb.driver.client                : MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "5.5.2"}, "os": {"type": "Linux", "name": "Linux", "architecture": "amd64", "version": "6.8.0-88-generic"}, "platform": "Java/Ubuntu/17.0.17+10-Ubuntu-124.04"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@14764fdd, com.mongodb.Jep395RecordCodecProvider@402fdef1, com.mongodb.KotlinCodecProvider@69e8f7a5]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27018], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null, timeoutMS=null}
+2025-11-25T15:29:18.001-05:00  INFO 33575 --- [catalogos] [localhost:27018] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27018, type=STANDALONE, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=27, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=9438507, minRoundTripTimeNanos=0}
+2025-11-25T15:29:18.153-05:00  WARN 33575 --- [catalogos] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-25T15:29:18.323-05:00  INFO 33575 --- [catalogos] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2025-11-25T15:29:18.328-05:00  INFO 33575 --- [catalogos] [           main] eventos.catalogos.CatalogosApplication   : Started CatalogosApplication in 2.439 seconds (process running for 2.609)
+2025-11-25T15:34:24.111-05:00  INFO 33575 --- [catalogos] [ionShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-25T15:34:24.115-05:00  INFO 33575 --- [catalogos] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-11-25T15:34:24.120-05:00  INFO 33575 --- [catalogos] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-25T15:34:24.122-05:00  INFO 33575 --- [catalogos] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-25T15:34:24.135-05:00  INFO 33575 --- [catalogos] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  05:09 min
+[INFO] Finished at: 2025-11-25T15:34:24-05:00
+[INFO] ------------------------------------------------------------------------

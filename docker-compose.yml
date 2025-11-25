@@ -7,11 +7,14 @@ services:
       - "8081:8081" # Mapea el puerto 8081
     depends_on:
       - mysqldb
+      - mongodb
     environment:
       # Configuración de conexión para MySQL
       SPRING_DATASOURCE_URL: jdbc:mysql://mysqldb:3306/db_users_hexagonal?allowPublicKeyRetrieval=true&useSSL=false
       SPRING_DATASOURCE_USERNAME: root
       SPRING_DATASOURCE_PASSWORD: root
+      # Configuración de conexión para MongoDB
+      SPRING_DATA_MONGODB_URI: mongodb://mongodb:27017/db_venues_mongo
       # Configuración de JPA
       SPRING_JPA_HIBERNATE_DDL_AUTO: validate
       # Flyway
@@ -24,12 +27,23 @@ services:
     image: mysql:8.0
     container_name: riwi-mysql-db
     ports:
-      - "3307:3306" # Mapea al puerto 3307 para coincidir con application.properties
+      - "3309:3306" # Mapea al puerto 3309 para evitar conflictos
     environment:
       MYSQL_DATABASE: db_users_hexagonal
       MYSQL_ROOT_PASSWORD: 123456
     volumes:
       - mysql_data:/var/lib/mysql
+    networks:
+      - riwi-network
+
+  # Servicio de Base de Datos MongoDB
+  mongodb:
+    image: mongo:latest
+    container_name: riwi-mongo-db
+    ports:
+      - "27018:27017" # Mapea el puerto 27017 del contenedor al 27018 del host
+    volumes:
+      - mongo_data:/data/db
     networks:
       - riwi-network
 
@@ -41,3 +55,4 @@ networks:
 # Definición de volúmenes
 volumes:
   mysql_data:
+  mongo_data:
