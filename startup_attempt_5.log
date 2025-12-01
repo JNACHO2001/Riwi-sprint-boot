@@ -1,0 +1,71 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------------< eventos:catalogos >--------------------------
+[INFO] Building catalogos 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:3.5.7:run (default-cli) > test-compile @ catalogos >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ catalogos ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 3 resources from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ catalogos ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ catalogos ---
+[INFO] skip non existing resourceDirectory /home/Coder/NetBeansProjects/Riwi-sprint-boot/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ catalogos ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] <<< spring-boot:3.5.7:run (default-cli) < test-compile @ catalogos <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:3.5.7:run (default-cli) @ catalogos ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.7)
+
+2025-11-21T17:52:19.080-05:00  INFO 82575 --- [catalogos] [           main] eventos.catalogos.CatalogosApplication   : Starting CatalogosApplication using Java 17.0.16 with PID 82575 (/home/Coder/NetBeansProjects/Riwi-sprint-boot/target/classes started by Coder in /home/Coder/NetBeansProjects/Riwi-sprint-boot)
+2025-11-21T17:52:19.081-05:00  INFO 82575 --- [catalogos] [           main] eventos.catalogos.CatalogosApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-11-21T17:52:19.347-05:00  INFO 82575 --- [catalogos] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-21T17:52:19.379-05:00  INFO 82575 --- [catalogos] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 27 ms. Found 2 JPA repository interfaces.
+2025-11-21T17:52:19.574-05:00  INFO 82575 --- [catalogos] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-11-21T17:52:19.581-05:00  INFO 82575 --- [catalogos] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-21T17:52:19.581-05:00  INFO 82575 --- [catalogos] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.48]
+2025-11-21T17:52:19.605-05:00  INFO 82575 --- [catalogos] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-11-21T17:52:19.606-05:00  INFO 82575 --- [catalogos] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 503 ms
+2025-11-21T17:52:19.747-05:00  INFO 82575 --- [catalogos] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-21T17:52:19.920-05:00  INFO 82575 --- [catalogos] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@26e8ff8c
+2025-11-21T17:52:19.921-05:00  INFO 82575 --- [catalogos] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-21T17:52:19.946-05:00  INFO 82575 --- [catalogos] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://127.0.0.1:3307/db_users_hexagonal (MySQL 8.0)
+2025-11-21T17:52:19.991-05:00  INFO 82575 --- [catalogos] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 3 migrations (execution time 00:00.026s)
+2025-11-21T17:52:20.003-05:00  INFO 82575 --- [catalogos] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema `db_users_hexagonal`: 3
+2025-11-21T17:52:20.005-05:00  INFO 82575 --- [catalogos] [           main] o.f.core.internal.command.DbMigrate      : Schema `db_users_hexagonal` is up to date. No migration necessary.
+2025-11-21T17:52:20.054-05:00  INFO 82575 --- [catalogos] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-21T17:52:20.076-05:00  INFO 82575 --- [catalogos] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.33.Final
+2025-11-21T17:52:20.093-05:00  INFO 82575 --- [catalogos] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-21T17:52:20.228-05:00  INFO 82575 --- [catalogos] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-21T17:52:20.277-05:00  INFO 82575 --- [catalogos] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.43
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-21T17:52:20.920-05:00  INFO 82575 --- [catalogos] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-21T17:52:20.942-05:00  INFO 82575 --- [catalogos] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-21T17:52:21.111-05:00  INFO 82575 --- [catalogos] [           main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-21T17:52:21.458-05:00  WARN 82575 --- [catalogos] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-21T17:52:21.672-05:00  INFO 82575 --- [catalogos] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2025-11-21T17:52:21.678-05:00  INFO 82575 --- [catalogos] [           main] eventos.catalogos.CatalogosApplication   : Started CatalogosApplication in 2.783 seconds (process running for 2.909)
