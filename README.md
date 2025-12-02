@@ -1,4 +1,4 @@
-# Módulo de Administración de Eventos y Venues (HU-SEMANA-4)
+# Módulo de Administración de Eventos y Venues (HU-SEMANA-5)
 
 Este proyecto implementa el módulo de administración de **Eventos y Venues** para la plataforma de gestión de catálogos. Se ha desarrollado siguiendo una **Arquitectura Hexagonal** para garantizar la separación de responsabilidades, la mantenibilidad y la escalabilidad del código.
 
